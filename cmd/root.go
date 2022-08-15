@@ -14,14 +14,19 @@ import (
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "unzo",
-	Short: "A brief description of your application",
-	Long: `"unzo" is a command that unzips and open the file in vscode:
+	Use:   "go-cli",
+	Short: "go-cli can be used to unzip and open that specific file in a text editor.",
+	Long: `"go-cli" is a command that unzips and open the file in vscode:
 
-Type "unzo --help" for help.`,
+Type "go-cli --help" for help.`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
+
+	CompletionOptions: cobra.CompletionOptions{
+		DisableDefaultCmd: true,
+	},
+	Version: "1.0.1",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -42,7 +47,6 @@ func init() {
 
 	// Cobra also supports local flags, which will only run
 	// when this action is called directly.
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 
