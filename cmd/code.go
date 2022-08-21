@@ -16,7 +16,7 @@ import (
 // codeCmd represents the code command
 var codeCmd = &cobra.Command{
 	Use:   "code <zip_file_name>",
-	Short: "yet to be decided",
+	Short: "unzips a file and opens it in vscode.",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 

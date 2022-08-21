@@ -11,9 +11,9 @@ import (
 )
 
 // codeCmd represents the code command
-var codeCmd = &cobra.Command{
-	Use:   "code <zip_file_name>",
-	Short: "yet to be decided",
+var CodeCmd = &cobra.Command{
+	Use:   "idea <zip_file_name>",
+	Short: "unzips a file and opens it in intelliJ idea",
 	Long: `A longer description that spans multiple lines and likely contains examples
 and usage of using your command. For example:
 Cobra is a CLI library for Go that empowers applications.
@@ -60,17 +60,17 @@ to quickly create a Cobra application.`,
 			fmt.Println(err)
 		}
 
-		commandCode := exec.Command("code", wd)
+		commandCode := exec.Command("idea", wd)
 		err = commandCode.Run()
 
 		if err != nil {
-			fmt.Println("VS Code executable file not found in PATH.")
+			fmt.Println("IntelliJ idea executable file not found in PATH.")
 		}
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(codeCmd)
+	rootCmd.AddCommand(CodeCmd)
 
 	// Here you will define your flags and configuration settings.
 
