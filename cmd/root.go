@@ -16,7 +16,7 @@ import (
 var rootCmd = &cobra.Command{
 	Use:   "go-cli",
 	Short: "go-cli can be used to unzip and open that specific file in a text editor.",
-	Long: `"go-cli" is a command that unzips and open the file in vscode or idea:
+	Long: `"go-cli" is a command that unzips and open the file in VSCode or IntelliJ Idea:
 
 Type "go-cli --help" for help.
 

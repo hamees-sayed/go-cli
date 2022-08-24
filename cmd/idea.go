@@ -24,7 +24,7 @@ to quickly create a Cobra application.`,
 	DisableFlagsInUseLine: true,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("code called")
+		fmt.Println("Opening IntelliJ Idea...")
 
 		var err error
 		var fileName string
